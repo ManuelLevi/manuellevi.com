@@ -1,3 +1,11 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://manuellevi.com/'
+# disablePathToLower = true
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Manuel Levi'
+
+theme = "PaperMod"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
