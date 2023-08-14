@@ -1,3 +1,15 @@
 [submodule "themes/PaperMod"]
 	path = themes/PaperMod
 	url = https://github.com/adityatelange/hugo-PaperMod.git
+[submodule "themes/paper"]
+	path = themes/paper
+	url = https://github.com/nanxiaobei/hugo-paper
+[submodule "themes/archie"]
+	path = themes/archie
+	url = https://github.com/athul/archie.git
+[submodule "themes/mainroad"]
+	path = themes/mainroad
+	url = https://github.com/ManuelLevi/mainroad.git
+[submodule "themes/SapphireTheme"]
+	path = themes/SapphireTheme
+	url = https://github.com/manuellevi/SapphireTheme.git
