@@ -5,7 +5,6 @@ description = ""
 draft = false
 slug = "about"
 title = "About me"
-
 +++
 
 
