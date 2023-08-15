@@ -2,7 +2,7 @@
 author = "Manuel Levi"
 date = 2023-03-20T01:13:20Z
 description = ""
-draft = false
+draft = true
 slug = "common-errors-with-pandas-sklearn-and"
 title = "Common errors with Pandas, Sklearn and Tensorflow/Keras"
 

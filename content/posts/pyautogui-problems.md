@@ -2,7 +2,7 @@
 author = "Manuel Levi"
 date = 2023-02-14T17:56:52Z
 description = ""
-draft = false
+draft = true
 slug = "pyautogui-problems"
 title = "Pyautogui: Common problems and fixes (Python RPA)"
 

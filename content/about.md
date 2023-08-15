@@ -2,7 +2,7 @@
 author = "Manuel Levi"
 date = 2022-05-19T11:00:48Z
 description = ""
-draft = false
+draft = true
 slug = "about"
 title = "About me"
 +++
