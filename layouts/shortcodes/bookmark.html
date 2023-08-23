@@ -1,21 +1,112 @@
+<style>
+  .card {
+    display: flex;
+    border-radius: 3px;
+    border: 1px solid rgb(124 139 154/25%);
+  }
+
+  .column:first-child {
+    padding: 20px;
+    flex: 2;
+    border: 1px solid rgb(124 139 154/25%);
+  }
+  .column:nth-child(2) {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .column:nth-child(2) img {
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    width: auto;
+    height: 100%;
+    /* Set the image height to 100% of the parent */
+    left: 0;
+    object-fit: cover;
+    /* Make the image fill the entire element while maintaining aspect ratio */
+    top: 0;
+    width: 100%;
+    /* Set the image width to 100% of the parent */
+  }
+
+  .title {
+    font-size: 0.9rem;
+    line-height: 1.4em;
+    font-weight: 600;
+    margin-bottom: 2px;
+  }
+
+  .description {
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 2px;
+    /* Set the desired height for the description */
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .icon {
+    height: 20px;
+    width: 20px;
+    margin: 0px;
+    background-color: #fff;
+  }
+  .author {
+    margin: 0;
+    font-weight: 200;
+    font-size: 0.9em;
+  }
+
+  .text {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    /* Limit to 3 lines */
+    -webkit-box-orient: vertical;
+    /* Prevent text from wrapping to new lines */
+
+    /* Hide any content that overflows the container */
+    text-overflow: ellipsis;
+    /* Add an ellipsis (...) at the end of the truncated text */
+  }
+
+  .source {
+    display: flex;
+    align-items: center;
+    margin-top: 0.6em;
+  }
+
+  a.bookmark{
+    text-decoration: none;
+    color: inherit;
+  }
+</style>
+
 <figure class="kg-card kg-bookmark-card">
-  <a href="{{ .Get "url" }}" class="kg-bookmark-container">
-    <div class="kg-bookmark-content">
-      <div class="kg-bookmark-title">{{ .Get "title" }}</div>
-      <div class="kg-bookmark-description">{{ .Get "description" }}</div>
-      <div class="kg-bookmark-metadata">
-        {{ with .Get "icon" }}<img src="{{ . }}" class="kg-bookmark-icon">{{ end }}
-        {{ with .Get "author" }}<span class="kg-bookmark-author">{{ . }}</span>{{ end }}
-        {{ with .Get "publisher" }}<span class="kg-bookmark-publisher">{{ . }}</span>{{ end }}
+  <a href="{{ .Get "url" }}" class="bookmark">
+    <div class="card">
+      <div class="column">
+        <div class="title">{{ .Get "title" }}</div>
+        <div class="description">
+          <span class="text">{{ .Get "description" }}</span>
+        </div>
+
+        <div class="source">
+          <img class="icon" src="{{ .Get "icon"}}" alt="Icon">
+          <p style="margin-left: 0.4em;" class="author">{{ .Get "author" }} - {{ .Get "publisher" }}</p>
+        </div>
+      </div>
+      <div class="column">
+        <img style="margin: 0px;" src="{{ .Get "thumbnail"}}">
       </div>
     </div>
-    {{ with .Get "thumbnail" }}
-    <div class="kg-bookmark-thumbnail">
-      <img src="{{ . }}">
-    </div>
-    {{ end }}
   </a>
   {{ if .Get "caption" }}
-  <figcaption>{{ . }}</figcaption>
+    <figcaption>{{ . }}</figcaption>
   {{ end }}
 </figure>
