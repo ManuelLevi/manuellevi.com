@@ -3,8 +3,8 @@ baseURL = 'https://manuellevi.com/'
 languageCode = 'en-us'
 title = 'Manuel Levi'
 
-#theme = "archie" # cool theme, white and red, a bit nerdy
-theme = 'SapphireTheme'
+theme = "archie" # cool theme, white and red, a bit nerdy
+# theme = 'paper'
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
