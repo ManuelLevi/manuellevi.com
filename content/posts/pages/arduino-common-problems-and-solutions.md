@@ -3,12 +3,11 @@ author = "Manuel Levi"
 categories = ["Checklist"]
 date = 2022-05-24T23:23:40Z
 description = ""
-draft = true
-image = "__GHOST_URL__/content/images/2022/05/IMG_20220525_003936.jpg"
+draft = false
+image = "../images/arduino_m5stick.jpg"
 slug = "arduino-common-problems-and-solutions"
 tags = ["Checklist"]
-title = "Arduino Checklist"
-
+title = "CHECKLIST: Arduino"
 +++
 
 

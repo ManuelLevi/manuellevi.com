@@ -5,7 +5,7 @@ description = ""
 draft = false
 image = "../images/twitter_me_vs_others.png"
 slug = "im-worse-than-average-on-twitter"
-title = "I'm worse than average (on Twitter)"
+title = "CODE: I'm worse than average (on Twitter)"
 +++
 
 ## The exponential power of social networks
