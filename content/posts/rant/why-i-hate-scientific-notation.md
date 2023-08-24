@@ -10,9 +10,10 @@ title = "RANT: Why I HATE numpy's scientific notation and how to fix it"
 +++
 
 
-⚠️
 
+{{< callout >}}
 This is a RANT. If you're a math nazi, you'll be offended by this. Scientific notation is **rarely** useful. If you understand anything about statistics and the english language, you understand the difference between me saying **rarely useful**, and **never useful**. Are there tons of uses for scientific notation? Sure. Do they represent the majority? Not even close. Is scientific notation overused? Definitely.
+{{< /callout >}}
 
 When you're working with Python, numpy, and any sort of normalized data, it's very common to get an array like this:
 
