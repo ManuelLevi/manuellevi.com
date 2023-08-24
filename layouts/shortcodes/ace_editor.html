@@ -1,0 +1,49 @@
+<!-- Ace Editor -->
+<script src="/js/ace-min-1.4.14/ace.js"></script>
+<script>
+var editors = document.querySelectorAll('.editor');
+editors.forEach(function(editorElem) {
+    var editor = ace.edit(editorElem);
+    editor.setTheme("ace/theme/dracula");
+    editor.getSession().setMode("ace/mode/csharp");
+
+    var linestart = parseInt(editorElem.dataset['linestart']);
+    if (linestart) {
+        editor.setOption("firstLineNumber", linestart);
+    } else {
+        editor.setOption("firstLineNumber", 1);
+    }
+
+    editor.setOptions({
+        maxLines: 25
+    });
+    editor.setOption("indentedSoftWrap", true);
+    editor.getSession().setUseWrapMode(true);
+    editor.setReadOnly(true);
+    editor.setShowPrintMargin(false);
+    editor.$blockScrolling = Infinity;
+});
+
+var pythonEditors = document.querySelectorAll('.python-editor');
+pythonEditors.forEach(function(editorElem) {
+    var editor = ace.edit(editorElem);
+    editor.setTheme("ace/theme/dawn");
+    editor.getSession().setMode("ace/mode/python");
+
+    var linestart = parseInt(editorElem.dataset['linestart']);
+    if (linestart) {
+        editor.setOption("firstLineNumber", linestart);
+    } else {
+        editor.setOption("firstLineNumber", 1);
+    }
+
+    editor.setOptions({
+        maxLines: 25
+    });
+    editor.setOption("indentedSoftWrap", true);
+    editor.getSession().setUseWrapMode(true);
+    editor.setReadOnly(true);
+    editor.setShowPrintMargin(false);
+    editor.$blockScrolling = Infinity;
+});
+</script>

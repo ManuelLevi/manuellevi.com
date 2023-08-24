@@ -10,8 +10,7 @@ tags = ["Crypto"]
 title = "CODE: An  unacceptable  contract"
 
 +++
-<!-- Ace Editor -->
-<script src="/js/ace-min-1.4.14/ace.js"></script>
+
 
 
 
@@ -466,7 +465,8 @@ There are still a few things a would like to explore:
  * Did everyone get their tokens?
  * Did anyone get more tokens in their wallet than they should?
 
-
+<!-- Ace Editor -->
+<script src="/js/ace-min-1.4.14/ace.js"></script>
 <script>
 var editors = document.querySelectorAll('.editor');
 editors.forEach(function(editorElem) {

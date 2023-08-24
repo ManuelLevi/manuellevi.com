@@ -3,10 +3,10 @@ author = "Manuel Levi"
 categories = ["python", "rant"]
 date = 2022-06-19T15:30:17Z
 description = ""
-draft = true
+draft = false
 slug = "why-i-hate-scientific-notation"
 tags = ["python", "rant"]
-title = "Why I HATE numpy's scientific notation and how to fix it"
+title = "RANT: Why I HATE numpy's scientific notation and how to fix it"
 +++
 
 
@@ -16,16 +16,18 @@ This is a RANT. If you're a math nazi, you'll be offended by this. Scientific no
 
 When you're working with Python, numpy, and any sort of normalized data, it's very common to get an array like this:
 
-`[1.02425171e-01, 1.46210406e-01, 0.00000000e+00, 3.90839180e-04, 5.85902134e-01]`
-
-Even though I work with numbers **literally every single day (**yes, even on vacation and weekends) I never got used to this, and probably never will.
+<pre class="python-editor">
+# Normalized data
+[1.02425171e-01, 1.46210406e-01, 0.00000000e+00, 3.90839180e-04, 5.85902134e-01]
+</pre>
+Even though I work with numbers **literally every single day** (yes, even on vacation and weekends) I never got used to this, and probably never will.
 
 Here's a table of advantages for scientific notation:
 
 | Advantages | Argument against |
 | --- | --- |
-| Good for massive numbers | Most times you won't be working with massive numbers - there's different units for that |
-| Good for tiny numbers | Most times you won't be working with tiny numbers - there's different units for that |
+| Good for massive numbers | Most times you won't be working with massive numbers - there are different units for that |
+| Good for tiny numbers | Most times you won't be working with tiny numbers - there are different units for that |
 
 > "But I can't say the moon is 384,400,000 meters away from the Earth!"
 
@@ -97,19 +99,21 @@ The magic solution
 ------------------
 
 Memorize this or write it somewhere, it contains the code for both pandas and numpy.
-
-    import numpy as np
-    import pandas
+<pre class="python-editor">
+# Magic to get rid of bad notation
+import numpy as np
+import pandas
     
-    np.set_printoptions(suppress=True)
-    pd.set_option('display.float_format', lambda x: '%.10f' % x)
-    
+np.set_printoptions(suppress=True)
+pd.set_option('display.float_format', lambda x: '%.10f' % x)
+</pre>
 
 To enable again:
-
-    np.set_printoptions(suppress=False)
-    pandas.reset_option('display.float_format')
-    
+<pre class="python-editor">
+# You got the cure, why do you want to get sick again?...
+np.set_printoptions(suppress=False)
+pandas.reset_option('display.float_format')
+</pre>
 
 According to the [documentation](https://numpy.org/doc/stable/reference/generated/numpy.set_printoptions.html), this is what `suppress` does:
 
@@ -117,4 +121,8 @@ According to the [documentation](https://numpy.org/doc/stable/reference/generate
 
 I've also added this to my Python checklist:
 
-[Python Checklist<br>Thoughts, stories, and ideas mostly on Data Science, Artificial Intelligence and Crypto.<br>![](https://manuellevi.com/favicon.ico)Manuel LeviManuel Levi](https://manuellevi.com/python-checklist/)
+{{< bookmark url="https://manuellevi.com/python-checklist/" title="Python Checklist" description="Use this checklist to make your Python developments easier and to solve most common problems." icon="https://manuellevi.com/favicon.ico" author="Manuel Levi" publisher="ManuelLevi.com" thumbnail="../../pages/images/arduino_m5stick.jpg" caption="" >}}
+
+
+
+{{<ace_editor>}}
