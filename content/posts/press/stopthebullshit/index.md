@@ -13,8 +13,7 @@ title = "PRESS: Stop The Bullshit - My next boss might be a robot"
 
 I was invited to the annual conference for the Pessoas magazine, #stopthebullshit, where I discussed how automation is changing the way organizations operate.
 
-
-![Image alt](images/stopthebullshit1.jpeg)
+{{< image src="images/stopthebullshit1.jpeg">}}
 
 I focused on the fact that it's still not clear who is responsible by AI driven decisions.
 
