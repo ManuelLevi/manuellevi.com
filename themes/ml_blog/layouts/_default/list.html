@@ -1,8 +1,19 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
-  {{ range .Pages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Summary }}
-  {{ end }}
+<div class="container">
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+    {{ range .Pages }}
+
+    <div class="py-4 mb-3">
+        <h6 class="display-6 fw-bold">
+            <a class="text-black text-decoration-none" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+        </h6>
+        <p class="mb-2">{{ .Summary }}</p>
+
+        <p class="small"><span class="text-danger fw-600">{{ .Date.Format "Jan 02, 2006" }}</span> &mdash; {{
+            .ReadingTime }}
+            MIN READ</p>
+    </div>
+    {{ end }}
+</div>
 {{ end }}
