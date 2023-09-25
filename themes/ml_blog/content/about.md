@@ -2,7 +2,7 @@
 author = "Manuel Levi"
 date = 2022-05-19T11:00:48Z
 description = ""
-draft = true
+draft = false
 slug = "about"
 title = "About me"
 +++
@@ -41,10 +41,3 @@ I am also a co-founder of [Enlightenment.ai](https://enlightenment.ai) together 
 ## Parabellum Capital Partners
 
 Recently I've joined Parabellum Capital Partners, an American crypto fund,  as one of the partners and CTO of the fund. As the CTO, I analyze different investments from a technical point of view using both my knowledge of solidity and blockchain analysis. The fund is also interested in helping with the creation of new tokens, where my role is to study the technical feasibility of the project and find the right team to develop it.
-
----
-
-### 
-
-
-
