@@ -37,7 +37,3 @@ I've worked with 8+ figure companies and market leaders around the world: Singap
 ## Enlightenment.AI
 
 I am also a co-founder of [Enlightenment.ai](https://enlightenment.ai) together with [Miguel Cabrita](https://www.linkedin.com/in/mantunescabrita/). An award winning company in the innovation space. We have been recognized by the National Innovation Agency as a suitable company for R&D for IT in Health, IT in Business and IoT. If you have a Portuguese company, this means **you can get up to 82.5% of your money back through tax incentives if you work with us**.
-
-## Parabellum Capital Partners
-
-Recently I've joined Parabellum Capital Partners, an American crypto fund,  as one of the partners and CTO of the fund. As the CTO, I analyze different investments from a technical point of view using both my knowledge of solidity and blockchain analysis. The fund is also interested in helping with the creation of new tokens, where my role is to study the technical feasibility of the project and find the right team to develop it.

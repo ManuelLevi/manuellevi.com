@@ -1,0 +1,49 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: montserrat;
+}
+
+nav {
+    background: #070c16;
+    height: 65px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+nav a{
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px
+}
+
+nav ul a {
+    color: white;
+    font-size: 12px;
+    line-height: 70px;
+    text-transform: uppercase;
+}
+
+label.logo {
+    color: white;
+    font-size: 50px;
+    line-height: 70px;
+    font-weight: lighter;
+}
+
+@media only screen and (max-width: 768px) {
+    ul{
+        visibility: hidden;
+    }
+}
