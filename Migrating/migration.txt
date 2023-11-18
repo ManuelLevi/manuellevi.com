@@ -1,0 +1,2 @@
+Migration was done with ghostToHugo.
+It worked, for some things.
