@@ -10,9 +10,29 @@ body {
     font-family: montserrat;
 }
 
+nav{
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav img {
+    height: 100%;
+}
+
+nav ul {
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    gap: 20px
+}
+/*
 nav {
     background: #070c16;
-    height: 65px;
+    height: 120px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -23,24 +43,16 @@ nav a{
     font-weight: bold;
 }
 
-nav ul {
-    display: flex;
-    gap: 20px
-}
+
 
 nav ul a {
     color: white;
     font-size: 12px;
     line-height: 70px;
     text-transform: uppercase;
-}
+}*/
 
-label.logo {
-    color: white;
-    font-size: 50px;
-    line-height: 70px;
-    font-weight: lighter;
-}
+
 
 @media only screen and (max-width: 768px) {
     ul{

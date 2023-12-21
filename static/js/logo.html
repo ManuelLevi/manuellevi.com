@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p5.js on Background Image Example</title>
+    <script src="/static/js/p5/p5/p5.js"></script>
+    <style>
+                body, html { 
+            margin: 0; 
+            padding: 0; 
+            height: 100%; /* Ensure full height */
+            background: url('/static/imgs/logo.jpg') no-repeat center center; 
+            background-size: contain; /* Adjusts image size to fit screen */
+            background-attachment: fixed; /* Keep the background image fixed in place */
+        }
+        #canvas-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 90%;
+            height: 10px;
+            opacity: 1; /* Adjust opacity as needed */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="canvas-container"></div>
+
+    <script>
+        function setup() {
+            let canvas = createCanvas(windowWidth, windowHeight);
+            canvas.parent('canvas-container');
+            background(0, 0); // Transparent background
+        }
+
+
+        function draw_white_circle(){
+            const date = new Date();
+            const milliseconds = 250+millis()/2 * Math.PI / 10;
+
+            speed = 1000;
+            radius = width * 0.305;
+            X = Math.sin(milliseconds / 1000) * radius + width / 2;
+            Y = -Math.cos(milliseconds / 1000) * radius + width / 2;
+            noStroke();
+            fill("#fffff4");
+            ellipse(X, Y, 80, 80);    
+        }
+
+        function draw_red_circle(){
+            const date = new Date();
+            const milliseconds = millis()*Math.PI/10;
+            
+            speed = 1000;
+            radius = width*0.265;
+            X = Math.sin(milliseconds / 1000) * radius + width / 2
+            Y = -Math.cos(milliseconds / 1000) * radius + width / 2
+            noStroke();
+            fill("#8c314c");
+            ellipse(X, Y, 50, 50);
+        }
+
+
+
+        function draw() {
+            clear()
+            fill(255, 0, 0, 127); // Semi-transparent red
+            
+            draw_red_circle();
+            
+            draw_vert_horz_lines();
+            draw_white_circle();
+        }
+
+        function draw_vert_horz_lines(){
+            stroke("#ffffff");
+            strokeWeight(10);
+            line(width/2, height * 0.06, width / 2, height*0.94);
+            line(width*0.06, height /2, width * 0.94, height * 0.5);
+        }
+
+        function windowResized() {
+            resizeCanvas(windowWidth, windowHeight);
+        }
+    </script>
+</body>
+
+</html>
